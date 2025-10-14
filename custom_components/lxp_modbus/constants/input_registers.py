@@ -208,6 +208,7 @@ I_GEN_VOLT = 121 # Generator voltage (Unit: 0.1V).
 I_GEN_FREQ = 122 # Generator frequency (Unit: 0.01Hz).
 I_GEN_POWER = 123 # Generator power (Unit: W).
 I_QINV = 139 # Reactive power (Unit: Var).
+I_AC_COUPLE_POWER = 153 # AC coupled inverter power (Unit: W).
 I_PLOAD = 170 # Load consumption when working in on-grid mode (Unit: W).
 
 # --- Added in V23 (2025-06-14) ---

@@ -123,6 +123,20 @@ SENSOR_TYPES = [
         "master_only": False,
         "device_group": "Grid",
     },
+    {
+        "name": "AC Coupled Power",
+        "register": I_AC_COUPLE_POWER,
+        "register_type": "input",
+        "extract": lambda value: value,
+        "unit": "W",
+        "device_class": "power",
+        "state_class": "measurement",
+        "icon": "mdi:transmission-tower-export",
+        "enabled": True,
+        "visible": True,
+        "master_only": False,
+        "device_group": "Grid",
+    },
 
     # --- Core Status & PV Information ---
     {
