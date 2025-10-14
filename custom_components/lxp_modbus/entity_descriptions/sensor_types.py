@@ -91,6 +91,38 @@ SENSOR_TYPES = [
         "master_only": False,
         "device_group": "Other",
     },
+    {
+        "name": "AC Coupling Flow",
+        "register": I_AC_INPUT_TYPE_FLAGS,
+        "register_type": "input",
+        "extract": lambda value: (value >> 1) & 1,
+        "icon": "mdi:current-ac",
+        "enabled": True,
+        "visible": True,
+        "default": "No Flow",
+        "options": {
+            0: "No Flow",
+            1: "Flow Active",
+        },
+        "master_only": False,
+        "device_group": "Grid",
+    },
+    {
+        "name": "AC Coupling Enabled",
+        "register": I_AC_INPUT_TYPE_FLAGS,
+        "register_type": "input",
+        "extract": lambda value: (value >> 2) & 1,
+        "icon": "mdi:toggle-switch",
+        "enabled": True,
+        "visible": True,
+        "default": "Disabled",
+        "options": {
+            0: "Disabled",
+            1: "Enabled",
+        },
+        "master_only": False,
+        "device_group": "Grid",
+    },
 
     # --- Core Status & PV Information ---
     {
